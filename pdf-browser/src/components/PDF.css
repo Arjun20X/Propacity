@@ -1,0 +1,16 @@
+li{
+    list-style-type: none;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    /* border-radius: 0.8rem; */
+}
+
+button{
+    background-color: rgb(51, 51, 227);
+    padding: 1rem;
+    cursor: pointer;
+}
