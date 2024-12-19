@@ -5,31 +5,44 @@ import "./PDF.css";
 export const PDF = ({ pdfData,pdfIndex, onSelectPdfForLink}) => {
   return (
     <>
-      <li className="rounded-lg" key={pdfIndex}>
-        <img
-          src="https://www.digitalvidya.com/blog/wp-content/uploads/2019/10/download-10.webp"
-          width={150}
-        />
-        <div className="flex flex-col gap-6 ">
-          <p className="font-bold text-3xl ">
-            Title: <span className="text-red-700 ">{pdfData.name}</span>{" "}
+      <li className=" flex flex-wrap gap-5  rounded-lg" key={pdfIndex}>
+        <div>
+          <img
+            src="https://www.digitalvidya.com/blog/wp-content/uploads/2019/10/download-10.webp"
+            width={150}
+          />
+        </div>
+
+        <div className=" md:absolute md:left-52 flex flex-col gap-6 ">
+          <p className="font-extrabold text-3xl text-yellow-300 ">
+            Title:{" "}
+            <span className="text-white font-bold underline">
+              {pdfData.name}
+            </span>{" "}
           </p>
-          <p className="font-bold text-2xl ">
-            Authors : <span className="text-red-700 ">{pdfData.author}</span>
+          <p className="font-extrabold text-2xl text-yellow-300  ">
+            Authors :{" "}
+            <span className="text-white font-bold underline">
+              {pdfData.author}
+            </span>
           </p>
-          <p className="font-bold text-xl ">
+          <p className="font-extrabold text-xl text-yellow-300  ">
             Published :{" "}
-            <span className="text-red-700 ">{pdfData.published} </span>
+            <span className="text-white font-bold underline">
+              {pdfData.published}{" "}
+            </span>
           </p>
         </div>
-        <NavLink to="/reader">
-          <button
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            onClick={() => onSelectPdfForLink(pdfData.link)}
-          >
-            READ
-          </button>
-        </NavLink>
+        <div>
+          <NavLink to="/reader">
+            <button
+              class=" text-white bg-[#1c65f2] focus:ring-2 focus:ring-slate-900 font-medium rounded-lg text-sm px-10 py-3 me-2 mb-2 dark:bg-[#1c65f2] focus:outline-none dark:focus:ring-slate-900 hover:bg-blue-700"
+              onClick={() => onSelectPdfForLink(pdfData.link)}
+            >
+              <span className="text-xl font-bold ">READ</span>
+            </button>
+          </NavLink>
+        </div>
       </li>
     </>
   );
