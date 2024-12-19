@@ -3,3 +3,36 @@ body{
   width: 80%;
   margin: auto;
 }
+.pdf-list h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pdf-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.read-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
