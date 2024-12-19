@@ -6,10 +6,7 @@ import { BeatLoader } from "react-spinners"; // Import a spinner (install react-
 export const PdfList = ({ onSelectPdf }) => {
   const [pdf, setPdf] = useState([]);
   const [search, setSearch] = useState("");
-<<<<<<< HEAD
   const [loading, setLoading] = useState(true); // Loading state
-=======
->>>>>>> 7495c2c504f014888ef577d200f7bb7c9da50ffd
 
   const API = "https://api.npoint.io/dee51ea017d20efdfcc8";
 
@@ -18,18 +15,12 @@ export const PdfList = ({ onSelectPdf }) => {
     try {
       const res = await fetch(API);
       const data = await res.json();
-<<<<<<< HEAD
       console.log("Fetched data:", data);
       setPdf(data);
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false); // End loading
-=======
-      setPdf(data);
-    } catch (error) {
-      console.error(error);
->>>>>>> 7495c2c504f014888ef577d200f7bb7c9da50ffd
     }
   };
 
@@ -46,7 +37,6 @@ export const PdfList = ({ onSelectPdf }) => {
   };
 
   return (
-<<<<<<< HEAD
     <>
       <div className="mt-2 w-full">
         <div className="w-full">
@@ -128,34 +118,7 @@ export const PdfList = ({ onSelectPdf }) => {
             )}
           </ul>
         )}
-=======
-    <div className="pdf-list mt-2 w-full">
-      <div>
-        <h1>PDF Reader</h1>
-        <div>
-          <form>
-            <input
-              type="search"
-              placeholder="Search PDFs..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              required
-              className="search-input"
-            />
-          </form>
-        </div>
->>>>>>> 7495c2c504f014888ef577d200f7bb7c9da50ffd
       </div>
-
-      <ul className="pdf-items mx-auto flex flex-col gap-10 mt-5">
-        {searchData.map((curr, index) => (
-          <PDF
-            pdfData={curr}
-            pdfIndex={index}
-            onSelectPdfForLink={onSelectPdf}
-          />
-        ))}
-      </ul>
-    </div>
+    </>
   );
 };
